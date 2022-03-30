@@ -1,0 +1,12 @@
+Source: ros-galactic-ur-description
+Section: misc
+Priority: optional
+Maintainer: Felix Exner <exner@fzi.de>
+Build-Depends: debhelper (>= 9.0.0), liburdfdom-tools, ros-galactic-ament-cmake, ros-galactic-ament-cmake-pytest, ros-galactic-launch-testing-ament-cmake, ros-galactic-launch-testing-ros, ros-galactic-xacro, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-ur-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-joint-state-publisher-gui, ros-galactic-launch, ros-galactic-launch-ros, ros-galactic-robot-state-publisher, ros-galactic-rviz2, ros-galactic-urdf, ros-galactic-xacro, ros-galactic-ros-workspace
+Description: URDF description for Universal Robots
