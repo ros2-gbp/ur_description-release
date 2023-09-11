@@ -8,12 +8,19 @@ ROS2 Distro | Branch | Build status | Released packages
 :---------: | :----: | :----------: | :---------------:
 **Galactic** | [`galactic`](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/galactic) | [![Galactic Binary Build](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-galactic.yml/badge.svg?branch=galactic)](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-galactic.yml?branch=galactic) <br /> | [ur_description](https://index.ros.org/p/ur_description/#galactic)
 **Humble** | [`ros2`](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/ros2) | [![Humble Binary Build](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-humble.yml/badge.svg?branch=ros2)](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-humble.yml?branch=ros2) <br /> | [ur_description](https://index.ros.org/p/ur_description/#humble)
+**Iron** | [`ros2`](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/ros2) | [![Iron Binary Build](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-iron.yml/badge.svg?branch=ros2)](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-iron.yml?branch=ros2) <br /> | [ur_description](https://index.ros.org/p/ur_description/#iron)
 **Rolling** | [`ros2`](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/tree/ros2) | [![Rolling Binary Build](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-rolling.yml/badge.svg?branch=ros2)](https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/actions/workflows/binary-rolling.yml?branch=ros2) <br /> | [ur_description](https://index.ros.org/p/ur_description/#rolling)
 
 
 Note that for ROS2 **Foxy** the description is in the [driver's
 repository](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/tree/foxy). Please do
 not clone this repository into a Foxy workspace.
+
+## License
+The majority of this repository is licensed under the BSD-3-Clause license. However, the **UR20
+meshes** are licensed under Universal Robots A/S’ Terms and Conditions for Use of Graphical Documentation. See the separate
+[LICENSE.txt](/meshes/ur20/LICENSE.txt) file for details. If you have any questions regarding the
+license or the license doesn't fit you use-case, please contact [legal@universal-robots.com](mailto:legal@universal-robots.com).
 
 ## Structure of the repository
 
