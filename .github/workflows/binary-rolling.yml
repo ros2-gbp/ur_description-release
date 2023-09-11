@@ -1,20 +1,24 @@
-name: Prerelease
+name: Rolling Binary Build
 on:
+  pull_request:
+    branches:
+      - ros2
   push:
     branches:
       - ros2
-    tags:
-      - '**'
+  schedule:
+    # Run every morning to detect flakiness and broken dependencies
+    - cron: '53 5 * * *'
+
 jobs:
-  prerelease:
-    name: prerelease build
+  rolling_binary:
+    name: rolling binary build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        ROS_DISTRO: [humble, rolling]
-        ROS_REPO: [main]
-        PRERELEASE: [true]
+        ROS_DISTRO: [rolling]
+        ROS_REPO: [main, testing]
     env:
       CCACHE_DIR: ${{ github.workspace }}/.ccache
       BASEDIR: ${{ github.workspace }}/.work
@@ -43,7 +47,6 @@ jobs:
         env:
           ROS_DISTRO: ${{ matrix.ROS_DISTRO }}
           ROS_REPO: ${{ matrix.ROS_REPO }}
-          PRERELEASE: ${{ matrix.PRERELEASE }}
 
       - name: prepare target_ws for cache
         if: ${{ always() && ! matrix.CCOV }}

@@ -1,26 +1,34 @@
-name: Prerelease
+name: Iron Binary Build
 on:
+  workflow_dispatch:
+    branches:
+      - iron
+  pull_request:
+    branches:
+      - iron
+      - ros2
   push:
     branches:
-      - ros2
-    tags:
-      - '**'
+      - iron
+  schedule:
+    # Run every morning to detect flakiness and broken dependencies
+    - cron: '53 5 * * *'
+
 jobs:
-  prerelease:
-    name: prerelease build
+  iron_binary:
+    name: iron binary build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        ROS_DISTRO: [humble, rolling]
-        ROS_REPO: [main]
-        PRERELEASE: [true]
+        ROS_DISTRO: [iron]
+        ROS_REPO: [main, testing]
     env:
       CCACHE_DIR: ${{ github.workspace }}/.ccache
       BASEDIR: ${{ github.workspace }}/.work
       CACHE_PREFIX: ${{ matrix.ROS_DISTRO }}-${{ matrix.ROS_REPO }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # The target directory cache doesn't include the source directory because
       # that comes from the checkout.  See "prepare target_ws for cache" task below
       - name: cache target_ws
@@ -43,7 +51,6 @@ jobs:
         env:
           ROS_DISTRO: ${{ matrix.ROS_DISTRO }}
           ROS_REPO: ${{ matrix.ROS_REPO }}
-          PRERELEASE: ${{ matrix.PRERELEASE }}
 
       - name: prepare target_ws for cache
         if: ${{ always() && ! matrix.CCOV }}

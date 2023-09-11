@@ -2,27 +2,17 @@
 Changelog for package ur_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.1 (2023-09-08)
+2.1.1 (2023-09-08)
 ------------------
-* Update the joint limits for UR20 (`#98 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/98>`_)
+* Update the joint limits for UR20 (`#99 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/99>`_)
 * UR20 description and meshes (`#94 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/94>`_)
   The UR20 meshes are added under Universal Robots A/S’
   Terms and Conditions for Use of Graphical Documentation
-* Contributors: Rune Søe-Knudsen, Felix Exner
-
-2.2.0 (2023-08-28)
-------------------
-* Auto-update pre-commit hooks
-* Do not require upstream ws in ici
-* Auto-update pre-commit hooks (`#88 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/88>`_)
-* Bump ros-tooling/setup-ros from 0.2 to 0.7 (`#83 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/83>`_)
-* Bump pat-s/always-upload-cache from 2.1.5 to 3.0.11 (`#84 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/84>`_)
-* Bump actions/checkout from 1 to 3 (`#85 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/85>`_)
-* Update README regarding distribution branches (`#80 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/80>`_)
-* Add mergify, dependabot and pre-commit update
+  Co-authored-by: Rune Søe-Knudsen <41109954+urrsk@users.noreply.github.com>
+* Revert "Switch fake to mock for ros2_control updates (`#77 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/77>`_)"
 * Switch fake to mock for ros2_control updates (`#77 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/77>`_)
-* Add iron workflow (`#64 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/64>`_)
-* Contributors: Felix Exner, Sebastian Castro, dependabot[bot], github-actions[bot]
+* CI: Add iron workflow (`#64 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/64>`_)
+* Contributors: Felix Exner, Sebastian Castro, Rune Søe-Knudsen
 
 2.1.0 (2023-06-01)
 ------------------
