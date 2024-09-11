@@ -2,6 +2,11 @@
 Changelog for package ur_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.3.2 (2024-09-10)
+------------------
+* Fix masses of robot links (backport of `#187 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/187>`_)
+* Contributors: Felix Exner
+
 2.3.1 (2024-08-09)
 ------------------
 * Added dynamics tag when using mock_components/GenericSystem (`#175 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/175>`_)
