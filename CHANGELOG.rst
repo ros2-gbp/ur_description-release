@@ -2,6 +2,21 @@
 Changelog for package ur_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.5 (2024-10-14)
+------------------
+* Revert "Add passthrough command interfaces for joints (`#204 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/204>`_)" (`#214 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/214>`_)
+* Auto-update pre-commit hooks (`#211 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/211>`_)
+* Contributors: Felix Exner (fexner), github-actions[bot]
+
+2.4.4 (2024-10-10)
+------------------
+* Add a sensor for the TCP pose (`#197 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/197>`_)
+* Add passthrough command interfaces for joints (`#204 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/204>`_)
+* Ur3 infinite wrist (`#196 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/196>`_)
+* Update dynamic properties (`#195 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/195>`_)
+  Co-authored-by: Rune Søe-Knudsen <41109954+urrsk@users.noreply.github.com>
+* Contributors: Chalongrath Pholsiri, Felix Exner (fexner), URJala, Rune Søe-Knudsen
+
 2.4.3 (2024-09-10)
 ------------------
 * Fix masses of robot links (`#187 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/187>`_)
