@@ -137,6 +137,16 @@
           <state_interface name="torque.z"/>
         </sensor>
 
+        <sensor name="${tf_prefix}tcp_pose">
+          <state_interface name="position.x"/>
+          <state_interface name="position.y"/>
+          <state_interface name="position.z"/>
+          <state_interface name="orientation.x"/>
+          <state_interface name="orientation.y"/>
+          <state_interface name="orientation.z"/>
+          <state_interface name="orientation.w"/>
+        </sensor>
+
         <!-- NOTE The following are joints used only for testing with fake hardware and will change in the future -->
         <gpio name="${tf_prefix}speed_scaling">
           <state_interface name="speed_scaling_factor"/>
@@ -167,6 +177,7 @@
 
           <command_interface name="standard_analog_output_cmd_0"/>
           <command_interface name="standard_analog_output_cmd_1"/>
+          <command_interface name="analog_output_domain_cmd"/>
 
           <command_interface name="tool_voltage_cmd"/>
 
@@ -281,6 +292,12 @@
           <state_interface name="initialized"/>
         </gpio>
 
+        <gpio name="${tf_prefix}get_robot_software_version">
+          <state_interface name="get_version_major"/>
+          <state_interface name="get_version_minor"/>
+          <state_interface name="get_version_build"/>
+          <state_interface name="get_version_bugfix"/>
+        </gpio>
       </xacro:unless>
 
     </ros2_control>
