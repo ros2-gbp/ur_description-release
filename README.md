@@ -1,3 +1,26 @@
+## ur_description (iron) - 2.3.3-1
+
+The packages in the `ur_description` repository were released into the `iron` distro by running `/usr/bin/bloom-release ur_description -r iron -t iron` on `Tue, 29 Oct 2024 10:11:47 -0000`
+
+The `ur_description` package was released.
+
+Version of package(s) in repository `ur_description`:
+
+- upstream repository: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+- release repository: https://github.com/ros2-gbp/ur_description-release.git
+- rosdistro version: `2.3.2-1`
+- old version: `2.3.2-1`
+- new version: `2.3.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## ur_description (humble) - 2.1.8-2
 
 The packages in the `ur_description` repository were released into the `humble` distro by running `/usr/bin/bloom-release ur_description -r humble -t humble` on `Tue, 29 Oct 2024 10:03:55 -0000`
