@@ -1,14 +1,14 @@
-name: Iron Binary Build Main
+name: Humble Binary Build Testing
 on:
   workflow_dispatch:
     branches:
-      - iron
+      - humble
   pull_request:
     branches:
-      - iron
+      - humble
   push:
     branches:
-      - iron
+      - humble
   schedule:
     - cron: '53 5 * * *'
 
@@ -16,6 +16,6 @@ jobs:
   binary:
     uses: ./.github/workflows/reusable_ici.yml
     with:
-      ros_distro: iron
-      ros_repo: main
-      ref_for_scheduled_build: iron
+      ros_distro: humble
+      ros_repo: testing
+      ref_for_scheduled_build: humble
