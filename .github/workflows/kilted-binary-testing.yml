@@ -1,10 +1,9 @@
-name: Jazzy Binary Build Main
+name: Kilted Binary Build Testing
 on:
   workflow_dispatch:
   pull_request:
     branches:
       - rolling
-      - ros2
   push:
     branches:
       - rolling
@@ -12,9 +11,9 @@ on:
     - cron: '53 5 * * *'
 
 jobs:
-  jazzy_binary_main:
+  kilted_binary_testing:
     uses: ./.github/workflows/reusable_ici.yml
     with:
-      ros_distro: jazzy
-      ros_repo: main
+      ros_distro: kilted
+      ros_repo: testing
       ref_for_scheduled_build: rolling
