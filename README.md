@@ -1,3 +1,26 @@
+## ur_description (rolling) - 4.0.0-1
+
+The packages in the `ur_description` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ur_description --rosdistro rolling` on `Thu, 15 May 2025 09:32:31 -0000`
+
+The `ur_description` package was released.
+
+Version of package(s) in repository `ur_description`:
+
+- upstream repository: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+- release repository: https://github.com/ros2-gbp/ur_description-release.git
+- rosdistro version: `3.1.1-1`
+- old version: `3.1.1-2`
+- new version: `4.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## ur_description (rolling) - 3.1.1-2
 
 The packages in the `ur_description` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ur_description --rosdistro rolling` on `Thu, 15 May 2025 09:08:34 -0000`
