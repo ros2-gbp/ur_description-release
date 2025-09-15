@@ -4,8 +4,8 @@
 inertia_parameters:
   base_mass: 4.0  # This mass might be incorrect
   shoulder_mass: 9.9883
-  upper_arm_mass: 14.9255
-  forearm_mass: 6.1015
+  upper_arm_mass: 17.0738
+  forearm_mass: 7.6393
   wrist_1_mass: 2.089
   wrist_2_mass: 2.0869
   wrist_3_mass: 1.0666
@@ -23,13 +23,13 @@ inertia_parameters:
       y: -0.025304  # -model.z
       z: -0.033309  # model.y
     upper_arm_cog:
-      x: -0.228491  # model.x - upperarm_length
-      y: -0.000083  # model.y
-      z: 0.192787  # model.z
+      x: -0.333471  # model.x - upperarm_length
+      y: -0.000074  # model.y
+      z: 0.195420  # model.z
     forearm_cog:
-      x: -0.210929  # model.x - forearm_length
-      y: 0.000019  # model.y
-      z: 0.070552  # model.z
+      x: -0.298798  # model.x - forearm_length
+      y: 0.000058  # model.y
+      z: 0.065663  # model.z
     wrist_1_cog:
       x: 0.000025  # model.x
       y: -0.016413  # -model.z
@@ -78,19 +78,19 @@ inertia_parameters:
       iyz: 0.008805
       izz: 0.034263
     upper_arm:
-      ixx: 0.048202
-      ixy: 0.000232
-      ixz: -0.032135
-      iyy: 1.188499
-      iyz: -0.000017
-      izz: 1.182771
+      ixx: 0.056709
+      ixy: 0.000292
+      ixz: -0.054852
+      iyy: 2.440120
+      iyz: -0.000014
+      izz: 2.432744
     forearm:
-      ixx: 0.018481
-      ixy: -0.000005
-      ixz: 0.013601
-      iyy: 0.303502
+      ixx: 0.022148
+      ixy: 0.000052
+      ixz: 0.019779
+      iyy: 0.633274
       iyz: 0.000003
-      izz: 0.296843
+      izz: 0.625889
     wrist_1:
       ixx: 0.004339
       ixy: 0.000019
