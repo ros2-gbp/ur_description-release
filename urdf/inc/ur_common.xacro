@@ -57,6 +57,7 @@
 
     <!-- Extract subsections from yaml dictionaries -->
     <xacro:property name="sec_limits" value="${config_joint_limit_parameters['joint_limits']}"/>
+    <xacro:property name="sec_offsets" value="${config_physical_parameters['offsets']}"/>
     <xacro:property name="sec_inertia_parameters" value="${config_physical_parameters['inertia_parameters']}" />
     <xacro:property name="sec_mesh_files" value="${config_visual_parameters['mesh_files']}" scope="parent"/>
     <xacro:property name="sec_kinematics" value="${config_kinematics_parameters['kinematics']}" />
@@ -135,6 +136,10 @@
     <xacro:property name="wrist_3_roll" value="${sec_kinematics['wrist_3']['roll']}" scope="parent"/>
     <xacro:property name="wrist_3_pitch" value="${sec_kinematics['wrist_3']['pitch']}" scope="parent"/>
     <xacro:property name="wrist_3_yaw" value="${sec_kinematics['wrist_3']['yaw']}" scope="parent"/>
+
+    <!-- OFFSETS -->
+    <xacro:property name="shoulder_offset" value="${sec_offsets['shoulder_offset']}" scope="parent"/>
+    <xacro:property name="elbow_offset" value="${sec_offsets['elbow_offset']}" scope="parent"/>
 
     <!-- INERTIA PARAMETERS -->
     <!-- mass -->
@@ -224,6 +229,13 @@
     <xacro:property name="wrist_3_inertia_iyy" value="${prop_wrist_3_inertia['iyy']}" scope="parent"/>
     <xacro:property name="wrist_3_inertia_iyz" value="${prop_wrist_3_inertia['iyz']}" scope="parent"/>
     <xacro:property name="wrist_3_inertia_izz" value="${prop_wrist_3_inertia['izz']}" scope="parent"/>
+
+    <!-- cylinder radius -->
+    <xacro:property name="shoulder_radius" value="${sec_inertia_parameters['shoulder_radius']}" scope="parent"/>
+    <xacro:property name="upper_arm_radius" value="${sec_inertia_parameters['upper_arm_radius']}" scope="parent"/>
+    <xacro:property name="elbow_radius" value="${sec_inertia_parameters['elbow_radius']}" scope="parent"/>
+    <xacro:property name="forearm_radius" value="${sec_inertia_parameters['forearm_radius']}" scope="parent"/>
+    <xacro:property name="wrist_radius" value="${sec_inertia_parameters['wrist_radius']}" scope="parent"/>
 
     <!--KINEMATICS HASH-->
     <xacro:property name="kinematics_hash" value="${sec_kinematics['hash']}" scope="parent"/>
