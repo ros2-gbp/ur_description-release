@@ -1,3 +1,26 @@
+## ur_description (jazzy) - 3.3.1-1
+
+The packages in the `ur_description` repository were released into the `jazzy` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro jazzy` on `Wed, 01 Oct 2025 09:47:22 -0000`
+
+The `ur_description` package was released.
+
+Version of package(s) in repository `ur_description`:
+
+- upstream repository: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+- release repository: https://github.com/ros2-gbp/ur_description-release.git
+- rosdistro version: `3.3.0-1`
+- old version: `3.3.0-1`
+- new version: `3.3.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## ur_description (humble) - 2.7.1-1
 
 The packages in the `ur_description` repository were released into the `humble` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro humble` on `Wed, 01 Oct 2025 09:31:51 -0000`
