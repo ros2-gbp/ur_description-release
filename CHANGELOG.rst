@@ -2,33 +2,31 @@
 Changelog for package ur_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.3.1 (2025-10-01)
+4.1.1 (2025-10-01)
 ------------------
-* Update ur7e physical parameters to match ur5e (backport `#333 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/333>`_) (`#335 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/335>`_)
-* Auto-update pre-commit hooks (backport `#329 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/329>`_) (`#331 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/331>`_)
-* Adding migration notes to package docs (backport `#325 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/325>`_) (`#326 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/326>`_)
-* Contributors: mergify[bot]
+* Update ur7e physical parameters to match ur5e (`#333 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/333>`_)
+* Auto-update pre-commit hooks (`#329 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/329>`_)
+* Adding migration notes to package docs (`#325 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/325>`_)
+* Contributors: Felix Exner, URJala, github-actions[bot]
 
-3.3.0 (2025-09-15)
+4.1.0 (2025-09-15)
 ------------------
-* Add support for UR8LONG (`#320 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/320>`_)
-* Bump actions/setup-python from 5 to 6 (backport `#315 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/315>`_) (`#317 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/317>`_)
-* Bump actions/checkout from 4 to 5 (backport `#310 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/310>`_) (`#314 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/314>`_)
-* Auto-update pre-commit hooks (backport `#307 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/307>`_) (`#312 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/312>`_)
-* Auto-update pre-commit hooks (`#305 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/305>`_)
-* Auto-update pre-commit hooks (backport of `#299 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/299>`_) (`#301 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/301>`_)
-* Auto-update pre-commit hooks (backport `#295 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/295>`_) (`#297 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/297>`_)
-* Contributors: Felix Exner, mergify[bot]
+* Add support for UR8LONG (`#319 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/319>`_)
+* Bump actions/setup-python from 5 to 6 (`#315 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/315>`_)
+* Bump actions/checkout from 4 to 5 (`#310 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/310>`_)
+* Auto-update pre-commit hooks (`#307 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/307>`_)
+* Auto-update pre-commit hooks (`#303 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/303>`_)
+* Auto-update pre-commit hooks (`#299 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/299>`_)
+* Auto-update pre-commit hooks (`#295 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/295>`_)
+* Contributors: Felix Exner, dependabot[bot], github-actions[bot]
 
-3.2.0 (2025-05-15)
+4.0.0 (2025-05-14)
 ------------------
-* Add support for UR15 (`#287 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/287>`_)
-* Add documentation about the different base and base_link frames (backport of `#286 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/286>`_) (`#289 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/289>`_)
-* Updated doc github_url entries for jazzy branch
-* Delete dependabot and mergify configs
-* Update branch for jazzy
-* Remove unused workflow files
-* Contributors: Felix Exner, mergify[bot]
+* Add support for UR15 (`#290 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/290>`_)
+* Add documentation about the different base and base_link frames (`#286 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/286>`_)
+* [BREAKING] changes for Kilted (`#280 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/280>`_)
+* Branch jazzy (`#284 <https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/issues/284>`_)
+* Contributors: Felix Exner
 
 3.1.1 (2025-05-05)
 ------------------
