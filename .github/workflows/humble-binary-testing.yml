@@ -1,19 +1,21 @@
-name: Jazzy Binary Build Testing
+name: Humble Binary Build Testing
 on:
   workflow_dispatch:
+    branches:
+      - humble
   pull_request:
     branches:
-      - jazzy
+      - humble
   push:
     branches:
-      - jazzy
+      - humble
   schedule:
     - cron: '53 5 * * *'
 
 jobs:
-  jazzy_binary_testing:
+  binary:
     uses: ./.github/workflows/reusable_ici.yml
     with:
-      ros_distro: jazzy
+      ros_distro: humble
       ros_repo: testing
-      ref_for_scheduled_build: jazzy
+      ref_for_scheduled_build: humble
