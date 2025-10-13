@@ -1,4 +1,4 @@
-:github_url: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/blob/rolling/doc/index.rst
+:github_url: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description/blob/jazzy/doc/index.rst
 
 .. _ur_description:
 
