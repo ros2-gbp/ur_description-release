@@ -156,4 +156,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
-    version: :{auto}
+    version: 4.3.0
+    version_saved: :{auto}
