@@ -1,5 +1,8 @@
 # Physical parameters
 
+offsets:
+  shoulder_offset: 0.220941 # measured from model
+  elbow_offset: 0.049042 # measured from model
 
 inertia_parameters:
   base_mass: 4.0  # This mass might be incorrect
@@ -9,6 +12,12 @@ inertia_parameters:
   wrist_1_mass: 2.0
   wrist_2_mass: 2.0
   wrist_3_mass: 0.365
+
+  shoulder_radius: x0.060   # FROM UR5 DON'T USE
+  upper_arm_radius: x0.054  # FROM UR5 DON'T USE
+  elbow_radius: x0.060      # FROM UR5 DON'T USE
+  forearm_radius: x0.040    # FROM UR5 DON'T USE
+  wrist_radius: x0.045      # FROM UR5 DON'T USE
 
   links:
     base:
