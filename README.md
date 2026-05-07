@@ -1,3 +1,26 @@
+## ur_description (lyrical) - 4.3.1-1
+
+The packages in the `ur_description` repository were released into the `lyrical` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro lyrical` on `Thu, 07 May 2026 08:17:45 -0000`
+
+The `ur_description` package was released.
+
+Version of package(s) in repository `ur_description`:
+
+- upstream repository: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+- release repository: https://github.com/ros2-gbp/ur_description-release.git
+- rosdistro version: `4.3.0-3`
+- old version: `4.3.0-3`
+- new version: `4.3.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## ur_description (kilted) - 4.3.1-1
 
 The packages in the `ur_description` repository were released into the `kilted` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro kilted` on `Thu, 07 May 2026 08:13:25 -0000`
