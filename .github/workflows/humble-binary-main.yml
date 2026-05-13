@@ -1,6 +1,8 @@
 name: Humble Binary Build Main
 on:
   workflow_dispatch:
+    branches:
+      - humble
   pull_request:
     branches:
       - humble
@@ -11,7 +13,7 @@ on:
     - cron: '53 5 * * *'
 
 jobs:
-  humble_binary_main:
+  binary:
     uses: ./.github/workflows/reusable_ici.yml
     with:
       ros_distro: humble
