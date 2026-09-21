@@ -1,3 +1,26 @@
+## ur_description (humble) - 2.14.0-1
+
+The packages in the `ur_description` repository were released into the `humble` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro humble` on `Mon, 21 Sep 2026 12:08:20 -0000`
+
+The `ur_description` package was released.
+
+Version of package(s) in repository `ur_description`:
+
+- upstream repository: https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+- release repository: https://github.com/ros2-gbp/ur_description-release.git
+- rosdistro version: `2.13.0-1`
+- old version: `2.13.0-1`
+- new version: `2.14.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## ur_description (humble) - 2.13.0-1
 
 The packages in the `ur_description` repository were released into the `humble` distro by running `/home/feex/.local/bin/bloom-release ur_description --rosdistro humble` on `Wed, 22 Jul 2026 10:17:32 -0000`
