@@ -1,8 +1,5 @@
 # Physical parameters
 
-offsets:
-  shoulder_offset: 0.260 # measured from model
-  elbow_offset: 0.043 # measured from model
 
 inertia_parameters:
   # taken from https://www.universal-robots.com/articles/ur/application-installation/dh-parameters-for-calculations-of-kinematics-and-dynamics/
@@ -13,12 +10,6 @@ inertia_parameters:
   wrist_1_mass: 3.054
   wrist_2_mass: 3.126
   wrist_3_mass: 0.926
-
-  shoulder_radius: x0.060   # FROM UR5 CURRENTLY NOT USED ANYMORE
-  upper_arm_radius: x0.054  # FROM UR5 CURRENTLY NOT USED ANYMORE
-  elbow_radius: x0.060      # FROM UR5 CURRENTLY NOT USED ANYMORE
-  forearm_radius: x0.040    # FROM UR5 CURRENTLY NOT USED ANYMORE
-  wrist_radius: x0.045      # FROM UR5 CURRENTLY NOT USED ANYMORE
 
   links:
     base:
