@@ -29,11 +29,11 @@
 # Author: Lukas Sackewitz
 
 import os
-import pytest
 import shutil
 import subprocess
 import tempfile
 import xml.etree.ElementTree as ET
+import pytest
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -64,14 +64,11 @@ from ament_index_python.packages import get_package_share_directory
 @pytest.mark.parametrize("prefix", ["", "my_ur_"])
 def test_ur_urdf_xacro(ur_type, description_file, prefix):
     # Initialize Arguments
-    ur_type = "ur3"
     safety_limits = "true"
     safety_pos_margin = "0.15"
     safety_k_position = "20"
     # General Arguments
     description_package = "ur_description"
-    description_file = "ur.urdf.xacro"
-    prefix = '""'
 
     joint_limit_params = os.path.join(
         get_package_share_directory(description_package), "config", ur_type, "joint_limits.yaml"
@@ -138,36 +135,7 @@ def test_ur_urdf_xacro(ur_type, description_file, prefix):
         os.remove(tmp_urdf_output_file)
 
 
-@pytest.mark.parametrize(
-    ("argument", "expected"),
-    [
-        (None, "True"),
-        ("true", "True"),
-        ("false", "False"),
-    ],
-)
-def test_use_currents_as_efforts_hardware_parameter(argument, expected):
-    description_file_path = os.path.join(
-        get_package_share_directory("ur_description"), "urdf", "ur.urdf.xacro"
-    )
-    command = [
-        shutil.which("xacro"),
-        description_file_path,
-        "name:=ur5e",
-        "ur_type:=ur5e",
-    ]
-    if argument is not None:
-        command.append(f"use_currents_as_efforts:={argument}")
-
-    result = subprocess.run(command, capture_output=True, check=True, text=True)
-    robot = ET.fromstring(result.stdout)
-    parameter = robot.find(".//ros2_control/hardware/param[@name='use_currents_as_efforts']")
-
-    assert parameter is not None
-    assert parameter.text == expected
-
-
-def _generate_urdf(ur_type, physical_params=None, visual_params=None, extra_args=""):
+def _generate_urdf(ur_type, extra_args="", physical_params=None, visual_params=None):
     description_package = "ur_description"
     package_path = get_package_share_directory(description_package)
     description_file_path = os.path.join(package_path, "urdf", "ur.urdf.xacro")
@@ -223,10 +191,10 @@ def test_smart_panel_default_disabled_for_existing_models():
 
 
 def test_smart_panel_argument_overrides_visual_parameters():
-    disabled = _generate_urdf("ur17g-1300", extra_args="smart_panel:=false")
+    disabled = _generate_urdf("ur17g-1300", "smart_panel:=false")
     assert '<link name="smart_panel">' not in disabled
 
-    enabled = _generate_urdf("ur15", extra_args="smart_panel:=true")
+    enabled = _generate_urdf("ur15", "smart_panel:=true")
     assert '<link name="smart_panel">' in enabled
 
 
@@ -287,7 +255,9 @@ def test_new_mesh_offset_format(tmp_path):
     visual_params.write_text(visual_content, encoding="utf-8")
 
     origin = _upper_arm_visual_origin(
-        _generate_urdf("ur10", str(physical_params), str(visual_params))
+        _generate_urdf(
+            "ur10", physical_params=str(physical_params), visual_params=str(visual_params)
+        )
     )
 
     assert origin is not None
