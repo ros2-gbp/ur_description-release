@@ -37,7 +37,6 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 
 
 def generate_launch_description():
-
     return LaunchDescription(
         [
             IncludeLaunchDescription(
