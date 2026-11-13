@@ -12,7 +12,7 @@
     script_filename output_recipe_filename
     input_recipe_filename tf_prefix
     hash_kinematics robot_ip
-    tool_voltage:=0 tool_parity:=0 tool_baud_rate:=115200 tool_stop_bits:=1
+    tool_voltage:=0 tool_voltage_t2:='' tool_parity:=0 tool_baud_rate:=115200 tool_stop_bits:=1
     tool_rx_idle_chars:=1.5 tool_tx_idle_chars:=3.5 tool_device_name:=/tmp/ttyUR tool_tcp_port:=54321
     reverse_port:=50001
     script_sender_port:=50002
@@ -60,6 +60,8 @@
           <param name="use_tool_communication">${use_tool_communication}</param>
           <param name="kinematics/hash">${hash_kinematics}</param>
           <param name="tool_voltage">${tool_voltage}</param>
+          <!-- Empty means do not set a startup voltage. Connector T2 needs Tool Flange V2 on PolyScope X 10.15 or later. -->
+          <param name="tool_voltage_t2">${tool_voltage_t2}</param>
           <param name="tool_parity">${tool_parity}</param>
           <param name="tool_baud_rate">${tool_baud_rate}</param>
           <param name="tool_stop_bits">${tool_stop_bits}</param>
@@ -198,12 +200,19 @@
           <command_interface name="standard_digital_output_cmd_15"/>
           <command_interface name="standard_digital_output_cmd_16"/>
           <command_interface name="standard_digital_output_cmd_17"/>
+          <!-- T1_DO0-T1_DO3, tool digital pins 2-5. T1_DO0 is the Smart Panel LED. V2 tool flange only. -->
+          <command_interface name="standard_digital_output_cmd_18"/>
+          <command_interface name="standard_digital_output_cmd_19"/>
+          <command_interface name="standard_digital_output_cmd_20"/>
+          <command_interface name="standard_digital_output_cmd_21"/>
 
           <command_interface name="standard_analog_output_cmd_0"/>
           <command_interface name="standard_analog_output_cmd_1"/>
           <command_interface name="analog_output_domain_cmd"/>
 
           <command_interface name="tool_voltage_cmd"/>
+          <!-- Connector T2, Tool Flange V2 on PolyScope X 10.15 or later. -->
+          <command_interface name="tool_voltage_t2_cmd"/>
 
           <command_interface name="io_async_success"/>
 
@@ -225,6 +234,10 @@
           <state_interface name="digital_output_15"/>
           <state_interface name="digital_output_16"/>
           <state_interface name="digital_output_17"/>
+          <state_interface name="digital_output_18"/>
+          <state_interface name="digital_output_19"/>
+          <state_interface name="digital_output_20"/>
+          <state_interface name="digital_output_21"/>
 
           <state_interface name="digital_input_0"/>
           <state_interface name="digital_input_1"/>
@@ -245,6 +258,13 @@
           <state_interface name="digital_input_16"/>
           <state_interface name="digital_input_17"/>
 
+          <state_interface name="tool_t1_digital_input_0"/> <!-- Smart Panel T1's left button, T1_DI0. -->
+          <state_interface name="tool_t1_digital_input_1"/> <!-- Smart Panel T1's center button, T1_DI1. -->
+          <state_interface name="tool_t1_digital_input_2"/> <!-- Smart Panel T1's right button, T1_DI2. -->
+          <state_interface name="tool_t1_configurable_digital_input_0"/> <!-- Smart Panel T1, T1_CI0. Configurable safety-rated 2PE that can be used as the Freedrive pair. -->
+          <state_interface name="tool_t1_configurable_digital_input_1"/> <!-- Smart Panel T1, T1_CI1. Configurable safety-rated 2PE that can be used as the Freedrive pair. -->
+          <state_interface name="tool_t1_connected"/> <!-- Smart Panel T1 detect, T1_CONNECTED. -->
+
           <state_interface name="standard_analog_output_0"/>
           <state_interface name="standard_analog_output_1"/>
 
@@ -260,6 +280,11 @@
           <state_interface name="tool_output_voltage"/>
           <state_interface name="tool_output_current"/>
           <state_interface name="tool_temperature"/>
+
+          <!-- Connector T2, Tool Flange V2 on PolyScope X 10.15 or later. -->
+          <state_interface name="tool_flange_type"/>
+          <state_interface name="tool_output_voltage_2"/>
+          <state_interface name="tool_output_current_2"/>
 
           <state_interface name="tool_analog_input_0"/>
           <state_interface name="tool_analog_input_1"/>
